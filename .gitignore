@@ -3,3 +3,5 @@
 .venv
 test.py
 chroma_db
+test.ipynb
+letter.pdf
