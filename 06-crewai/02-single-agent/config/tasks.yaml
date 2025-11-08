@@ -26,27 +26,59 @@ financial_analysis:
 
   agent: fin_advisor
 
+# investment_recommendation:
+#   description: >
+#     Based on the financial analysis from the previous task, provide basic
+#     investment recommendations for the customer. Consider the following
+#     Indian investment options:
+#      - Fixed Deposits
+#      - Mutual Funds
+#      - Public Provident Fund (PPF)
+#      - National Pension System (NPS)
+
+#     Consdier the customer's:
+#      - Risk capacity (based on age and financial health)
+#      - Monthly savings potential
+#      - Existing investments
+#      - Tax saving requirements
+  
+#   expected_output: >
+#     A structured investment recommendation report with below in markdown without '```'
+#      - Recommend investment distribution (in percentages)
+#      - Specific investment suggestions
+#      - Monthly investment targets
+#      - Expected tax benefits
+  
+#   agent: fin_advisor
+
 investment_recommendation:
   description: >
-    Based on the financial analysis from the previous task, provide basic
-    investment recommendations for the customer. Consider the following
-    Indian investment options:
-     - Fixed Deposits
-     - Mutual Funds
-     - Public Provident Fund (PPF)
-     - National Pension System (NPS)
+    Create a comprehensive investment plan based on current market conditions in 2025
+    and the customer's financial analysis. Consider both traditional and modern
+    investment options available in India.
+
+    Your recommendation should incorporate:
+     1. Current market performance of various investment vehicles.
+     2. Latest interest rates and returns
+     3. Market trends and future outlook
+     4. Risk-return tradeoffs in present market
 
     Consdier the customer's:
      - Risk capacity (based on age and financial health)
-     - Monthly savings potential
+     - Monthly savings potential: {savings}
      - Existing investments
      - Tax saving requirements
+
+    Use the analysis from the previous task and todays market insights to create
+    a comprehensive investment plan that aims for financial independence
   
   expected_output: >
-    A structured investment recommendation report with below in markdown without '```'
+    A comprehensive investment recommendation report including in markdown without '```'
+     - Current Market Analysis
      - Recommend investment distribution (in percentages)
-     - Specific investment suggestions
+     - Specific investment suggestions with current rates/returns
      - Monthly investment targets
      - Expected tax benefits
+     - Market trend analysis and future outlook
   
   agent: fin_advisor

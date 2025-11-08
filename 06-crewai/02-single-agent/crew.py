@@ -1,5 +1,6 @@
 from crewai import Agent, Task, Crew, Process
 from crewai.project import CrewBase, agent, task, crew
+from crewai_tools import SerperDevTool
 
 @CrewBase
 class FinAdvisor:
@@ -22,6 +23,7 @@ class FinAdvisor:
     def investment_recommendation(self) -> Task:
         return Task(
             config=self.tasks_config["investment_recommendation"],
+            tools=[SerperDevTool()],
             output_file="investment_task2.md"
         )
         
