@@ -1,0 +1,27 @@
+financial_analysis:
+  description: >
+    Analyze the customer's financial situation based on the following inputs:
+    - Monthly salary: {salary}
+    - Monthly expenses: {expenses}
+    - Current savings: {savings}
+    - Current investments: {investments}
+    - Outstanding loans: {loans}
+    - Number of dependents: {dependents}
+
+    Provide a detailed analysis including:
+    1. Current financial health score (Good/Average/Needs Improvement)
+    2. Monthly savings potential
+    3. Debt-to-income ratio
+    4. Basic recommendations for improvement
+
+    Format the output as a structured report with clear sections
+
+  expected_output: >
+    A detailed financial analysis report with the following sections in markdown format without '```'
+    - Financial Health Overview
+    - Income and Expense Analysis
+    - Savings Analysis
+    - Debt Analysis
+    - Key Recommendations
+
+  agent: fin_advisor
