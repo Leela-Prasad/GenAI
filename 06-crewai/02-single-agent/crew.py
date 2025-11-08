@@ -18,6 +18,13 @@ class FinAdvisor:
             output_file="analysis_task2.md"
         )
         
+    @task
+    def investment_recommendation(self) -> Task:
+        return Task(
+            config=self.tasks_config["investment_recommendation"],
+            output_file="investment_task2.md"
+        )
+        
     @crew
     def crew(self) -> Crew:
         return Crew(

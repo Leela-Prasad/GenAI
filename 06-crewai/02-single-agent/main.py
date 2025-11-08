@@ -1,5 +1,12 @@
-from crew import FinAdvisor
+from langtrace_python_sdk import langtrace
 from dotenv import load_dotenv
+import os
+
+load_dotenv()
+langtrace.init(api_key = os.getenv("LANGTRACE_API_KEY"))
+
+
+from crew import FinAdvisor
 
 def run():
     inputs = {
@@ -15,5 +22,4 @@ def run():
     
 
 if __name__ == "__main__":
-    load_dotenv()
     run()
