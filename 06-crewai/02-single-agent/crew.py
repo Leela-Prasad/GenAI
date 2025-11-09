@@ -1,6 +1,7 @@
 from crewai import Agent, Task, Crew, Process
 from crewai.project import CrewBase, agent, task, crew
 from crewai_tools import SerperDevTool
+from tools import CustomerInfoTool
 
 @CrewBase
 class FinAdvisor:
@@ -9,6 +10,8 @@ class FinAdvisor:
     def fin_advisor(self) -> Agent:
         return Agent(
             config=self.agents_config["fin_advisor"],
+            # tools at agent level, so it can be used in both financial_analysis and investment_recommendation task
+            tools=[CustomerInfoTool()], 
             verbose=True
         )
         
