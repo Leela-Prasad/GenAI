@@ -1,0 +1,39 @@
+financial_analysis_task:
+  agent: financial_advisor
+  description: >
+    Analyze the comprehensive financial situation for customer with ID {customer_id}
+  expected_output: >
+    A detailed financial analysis report in markdown format
+  output_file: financial_analysis.md
+
+investment_planning_task:
+  agent: financial_advisor
+  description: >
+    Create a comprehensive 15 year investment plan for achieving financial independence
+  expected_output: >
+    A comprehensive investment recommendation report in markdown format
+  output_file: investment_plan.md
+
+retirement_planning_task:
+  agent: retirement_advisor
+  description: >
+    Create a comprehensive retirement planning strategy
+  expected_output: >
+    A focused retirement planning report in markdown format
+  output_file: retirement_planning.md
+
+tax_planning_task:
+  agent: tax_advisor
+  description: >
+    Develop tax optimization strategies based on financial analysis and investment recommendations
+  expected_output: >
+    A concise tax planning report in markdown format
+  output_file: tax_planning.md
+
+strategy_aggregation_task:
+  agent: strategy_aggregator
+  description: >
+    Consolidate all financial analysis and recommendations into unifed strategy
+  expected_output: >
+    A comprehensive financial strategy document in markdown format
+  output_file: comprehensive_strategy.md
