@@ -1,0 +1,60 @@
+analyze_finances_task:
+  agent: financial_analyst
+  description: >
+    Perform initial financial analysis for the client:
+     - Monthly Income: {monthly_income}
+     - Monthly Expenses: {monthly_expenses}
+     - Current Savings: {current_savings}
+
+    Create a comprehensive assessment of their financial health.
+  expected_output: >
+    A detailed financial analysis including:
+     - Current Financial Health Assessment
+     - Cash Flow Analysis
+     - Savings Potential
+     - Risk Capacity Evaluation
+  human_input: true
+
+investment_analysis_task:
+  agent: investment_advisor
+  description: >
+    Based on the financial analysis, recommend investment strategies that:
+     - Match their risk tolerance: {risk_tolerance}
+     - Align with their {investment_years} year timeline
+     - Maximize potential returns while managing risk
+  expected_output: >
+    An investment strategy including:
+     - Recommended Asset Allocation
+     - Specific Investment Vehicles
+     - Expected Returns Analysis
+  human_input: true
+
+tax_planning_task:
+  agent: tax_advisor
+  description: >
+    Based on the financial analysis, create a tax optimization plan that:
+     - Identifies tax-saving investment opportunities
+     - Maximizes available deductions
+     - Suggests tax-efficient strategies
+  expected_output: >
+    A tax optimization strategy including:
+     - Tax-Saving Investment Recommendations
+     - Deduction Opportunities
+     - Tax Efficiency Guidelines
+  human_input: true
+
+create_wealth_plan_task:
+  agent: wealth_manager
+  description: >
+    Create a comprehensive wealth management plan that integrates:
+     1. The initial financial analysis
+     2. Investment recommendations
+     3. Tax optimization strategies
+
+    Ensure all components work together cohesively.
+  expected_output: >
+    A comprehensive wealth management plan including:
+     - Integrated Strategy Summary
+     - Implementation Roadmap
+     - Monitoring Guidelines
+  human_input: true
