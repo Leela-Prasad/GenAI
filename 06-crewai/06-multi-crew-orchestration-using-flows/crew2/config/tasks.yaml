@@ -1,0 +1,37 @@
+tax_planning_task:
+  agent: tax_advisor
+  description: >
+    Based on the provided financial analysis and investment recommendations: {crew_one_output}
+     - Identifies tax-saving investment opportunities
+     - Maximizes available deductions
+     - Suggests tax-efficient strategies
+  expected_output: >
+    A tax optimization strategy including:
+     - Tax-Saving Investment Recommendations
+     - Deduction Opportunities
+     - Tax Efficiency Guidelines
+
+create_wealth_plan_task:
+  agent: wealth_manager
+  description: >
+    Create a comprehensive wealth management plan that integrates:
+    1. The provided analysis and recommendations: {crew_one_output} \n 
+    2. The tax optimization strategies
+    Ensure all components work together cohesively.
+
+    - Consider that annual income increases by 10% per annum 
+    - Amount after expenses (consdiering inflation of 7% per annum) can be invested more annually> Calculate how much extra can be invested every month
+
+    Use the provided analysis and recommendations only to create your wealth plan
+  expected_output: >
+    A comprehensive wealth management plan including:
+     - Integrated Strategy Summary
+     - Implementation Roadmap  which explains clearly about amounts invested/to be invested every year and how much it will be after 15 years
+     - a table which demonstrates how investment amounts  and expected return amounts  grow each year till  next 15 years(based on  average expected % of returns from each instrument)
+       and also considering that income will increase at 10% per annum. Amount left over after expenses will also be invested
+        Display expected percentage of returns also each year.  Table should show amounts invested in each instruments.
+     - Also display how much will be the total annual expenses at the end of 15 years, assuming inflation of 7% per annum in india
+     - At the end of 15 years, explain how much income can be withdrawn per month from  your investments asuuming  (after inflation amount still in investment).
+     - Will it be sufficient for monthly expenses?
+     - Explain if we have achieved financial independence comparing projected monthly expenses considering inflation and 4% per annum of investment return withdrawal from corpus
+  depends_on: [tax_planning_task]
