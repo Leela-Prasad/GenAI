@@ -1,13 +1,13 @@
 from langtrace_python_sdk import langtrace
 import os
+langtrace.init(api_key = os.getenv("LANGTRACE_API_KEY"))
+
 from flows import FinancialAdvisorFlow
 from crewai.llm import LLM
 from dotenv import load_dotenv
 
 def main():
     load_dotenv()
-    langtrace.init(api_key = os.getenv("LANGTRACE_API_KEY"))
-    
     # llm = LLM("gpt-4o-mini")
     
     initial_state = {
